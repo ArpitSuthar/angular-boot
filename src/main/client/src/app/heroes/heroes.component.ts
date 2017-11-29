@@ -7,7 +7,7 @@ import { HeroService } from '../hero.service';
   selector: 'app-my-heroes',
   templateUrl: './heroes.component.html',
   styleUrls: [ './heroes.component.css' ],
-  providers: [HeroService]
+  providers: [HeroService],
 })
 export class HeroesComponent implements OnInit {
   heroes: Hero[];
@@ -16,7 +16,7 @@ export class HeroesComponent implements OnInit {
     private router: Router,
     private heroService: HeroService) { }
   getHeroes(): void {
-    this.heroService.getHeroes().then(heroes => this.heroes = heroes);
+    this.heroService.getHeroes().then((heroes) => this.heroes = heroes);
   }
   ngOnInit(): void {
     this.getHeroes();

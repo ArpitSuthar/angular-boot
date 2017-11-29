@@ -13,12 +13,12 @@ export class HeroService {
 
   getHeroes(): Promise<Hero[]> {
     return this.http.get(this.greetingUrl).toPromise()
-      .then(response => response.json() as Hero[]).catch(this.handleError);
+      .then((response) => response.json() as Hero[]).catch(this.handleError);
   }
 
   getHero(id: number): Promise<Hero> {
     return this.getHeroes()
-               .then(heroes => heroes.find(hero => hero.id === id));
+               .then((heroes) => heroes.find((hero) => hero.id === id));
   }
 
   private handleError(error: any): Promise<any> {

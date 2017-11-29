@@ -1,4 +1,5 @@
 target/
+**/static/
 
 ### IntelliJ IDEA ###
 .idea
